@@ -1,4 +1,4 @@
-package com.isaacLocacao.models.view;
+package com.LuisaLocacao.models.view;
 /**
  * Classe que representa a abstração das views de locação transformadas em string.
  * 

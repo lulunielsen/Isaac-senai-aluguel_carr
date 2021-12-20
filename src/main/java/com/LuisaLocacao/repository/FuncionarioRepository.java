@@ -1,8 +1,8 @@
-package com.isaacLocacao.repository;
+package com.LuisaLocacao.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.isaacLocacao.models.Funcionario;
+import com.LuisaLocacao.models.Funcionario;
 
 /**
  * Interface utilizada para fazer uma sobrescrita de método do CrudRepository para a classe Funcionario.

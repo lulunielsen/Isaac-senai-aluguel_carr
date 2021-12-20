@@ -1,4 +1,4 @@
-package com.isaacLocacao.controller;
+package com.LuisaLocacao.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,17 +6,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.isaacLocacao.models.Agencia;
-import com.isaacLocacao.models.Carro;
-import com.isaacLocacao.models.Cliente;
-import com.isaacLocacao.models.Locacao;
-import com.isaacLocacao.models.Moto;
-import com.isaacLocacao.models.view.LocacaoView;
-import com.isaacLocacao.repository.AgenciaRepository;
-import com.isaacLocacao.repository.CarroRepository;
-import com.isaacLocacao.repository.ClienteRepository;
-import com.isaacLocacao.repository.LocacaoRepository;
-import com.isaacLocacao.repository.MotoRepository;
+import com.LuisaLocacao.models.Agencia;
+import com.LuisaLocacao.models.Carro;
+import com.LuisaLocacao.models.Cliente;
+import com.LuisaLocacao.models.Locacao;
+import com.LuisaLocacao.models.Moto;
+import com.LuisaLocacao.models.view.LocacaoView;
+import com.LuisaLocacao.repository.AgenciaRepository;
+import com.LuisaLocacao.repository.CarroRepository;
+import com.LuisaLocacao.repository.ClienteRepository;
+import com.LuisaLocacao.repository.LocacaoRepository;
+import com.LuisaLocacao.repository.MotoRepository;
 
 @Controller
 public class LocacaoController {

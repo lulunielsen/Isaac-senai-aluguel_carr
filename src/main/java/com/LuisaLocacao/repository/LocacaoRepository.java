@@ -1,9 +1,9 @@
-package com.isaacLocacao.repository;
+package com.LuisaLocacao.repository;
 
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.isaacLocacao.models.Locacao;
+import com.LuisaLocacao.models.Locacao;
 
 /**
  * Interface utilizada para fazer uma sobrescrita de método do CrudRepository para a classe Locacao.

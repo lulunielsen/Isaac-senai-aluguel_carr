@@ -1,6 +1,7 @@
-package com.isaacLocacao.models;
+package com.LuisaLocacao.models;
 
 import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,14 +9,14 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 /**
- * Classe que representa a abstração de todas as agências do sistema,
+ * Classe que representa a abstração de todos os funcionários do sistema,
  * inclusive seus respectivos endereços.
  * 
  * @author Widson.
  * @version 1.0.
  */
 @Entity
-public class Agencia implements Serializable {
+public class Funcionario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -23,9 +24,12 @@ public class Agencia implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long codigo;
 
-	private String nomefantasia;
-	private String cnpj;
-	private String inscricaoestadual;
+	private String cargo;
+	private String nome;
+	private String rg;
+	private String cpf;
+	private String datanascimento;
+	private String naturalidade;
 	private String endrua;
 	private String endnumero;
 	private String endcomplemento;
@@ -34,7 +38,7 @@ public class Agencia implements Serializable {
 	private String endunidadefederativa;
 	private String endcep;
 	private String telefone;
-	private String gerenteresponsavel;
+	private String email;
 
 	@OneToOne
 	private Locacao locacao;
@@ -47,28 +51,52 @@ public class Agencia implements Serializable {
 		this.codigo = codigo;
 	}
 
-	public String getNomefantasia() {
-		return nomefantasia;
+	public String getCargo() {
+		return cargo;
 	}
 
-	public void setNomefantasia(String nomefantasia) {
-		this.nomefantasia = nomefantasia;
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
 	}
 
-	public String getCnpj() {
-		return cnpj;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getInscricaoestadual() {
-		return inscricaoestadual;
+	public String getRg() {
+		return rg;
 	}
 
-	public void setInscricaoestadual(String inscricaoestadual) {
-		this.inscricaoestadual = inscricaoestadual;
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public String getDatanascimento() {
+		return datanascimento;
+	}
+
+	public void setDatanascimento(String datanascimento) {
+		this.datanascimento = datanascimento;
+	}
+
+	public String getNaturalidade() {
+		return naturalidade;
+	}
+
+	public void setNaturalidade(String naturalidade) {
+		this.naturalidade = naturalidade;
 	}
 
 	public String getEndrua() {
@@ -135,12 +163,12 @@ public class Agencia implements Serializable {
 		this.telefone = telefone;
 	}
 
-	public String getGerenteresponsavel() {
-		return gerenteresponsavel;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setGerenteresponsavel(String gerenteresponsavel) {
-		this.gerenteresponsavel = gerenteresponsavel;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public Locacao getLocacao() {

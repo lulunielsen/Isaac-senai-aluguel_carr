@@ -1,4 +1,4 @@
-package com.isaacLocacao.models;
+package com.LuisaLocacao.models;
 
 import java.io.Serializable;
 
@@ -7,22 +7,24 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import org.hibernate.annotations.Type;
 
 /**
- * Classe que representa a abstra��o de todos os carros do sistema.
+ * Classe que representa a abstração de todas as motos do sistema.
  * 
  * @author Widson.
  * @version 1.0.
  */
 @Entity
-public class Carro implements Serializable {
+public class Moto implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long codigo;
 
+	private boolean cbs;
+	private String cilindradas;
 	private String renavam;
 	private String modelo;
 	private String marca;
@@ -30,30 +32,15 @@ public class Carro implements Serializable {
 	private String anofab;
 	private String anomod;
 	private String cor;
-	@Type(type = "numeric_boolean")
 	private boolean combgasolina;
-	@Type(type = "numeric_boolean")
 	private boolean combetanol;
-	@Type(type = "numeric_boolean")
 	private boolean abs;
 	private String dataaquisicao;
 	private String localizacao;
 	private String porcentnivelcomb;
-	@Type(type = "numeric_boolean")
-	private boolean combdiesel;
-	@Type(type = "numeric_boolean")
-	private boolean combgnv;
-	@Type(type = "numeric_boolean")
-	private boolean arcondicionado;
-	@Type(type = "numeric_boolean")
-	private boolean vidroeletrico;
-	@Type(type = "numeric_boolean")
 	private boolean gps;
-	@Type(type = "numeric_boolean")
-	private boolean travas;
-	@Type(type = "numeric_boolean")
 	private boolean alarme;
-	
+
 	@OneToOne
 	private Locacao locacao;
 
@@ -63,6 +50,22 @@ public class Carro implements Serializable {
 
 	public void setCodigo(long codigo) {
 		this.codigo = codigo;
+	}
+
+	public boolean isCbs() {
+		return cbs;
+	}
+
+	public void setCbs(boolean cbs) {
+		this.cbs = cbs;
+	}
+
+	public String getCilindradas() {
+		return cilindradas;
+	}
+
+	public void setCilindradas(String cilindradas) {
+		this.cilindradas = cilindradas;
 	}
 
 	public String getRenavam() {
@@ -169,38 +172,6 @@ public class Carro implements Serializable {
 		this.porcentnivelcomb = porcentnivelcomb;
 	}
 
-	public boolean isCombdiesel() {
-		return combdiesel;
-	}
-
-	public void setCombdiesel(boolean combdiesel) {
-		this.combdiesel = combdiesel;
-	}
-
-	public boolean isCombgnv() {
-		return combgnv;
-	}
-
-	public void setCombgnv(boolean combgnv) {
-		this.combgnv = combgnv;
-	}
-
-	public boolean isArcondicionado() {
-		return arcondicionado;
-	}
-
-	public void setArcondicionado(boolean arcondicionado) {
-		this.arcondicionado = arcondicionado;
-	}
-
-	public boolean isVidroeletrico() {
-		return vidroeletrico;
-	}
-
-	public void setVidroeletrico(boolean vidroeletrico) {
-		this.vidroeletrico = vidroeletrico;
-	}
-
 	public boolean isGps() {
 		return gps;
 	}
@@ -209,19 +180,19 @@ public class Carro implements Serializable {
 		this.gps = gps;
 	}
 
-	public boolean isTravas() {
-		return travas;
-	}
-
-	public void setTravas(boolean travas) {
-		this.travas = travas;
-	}
-
 	public boolean isAlarme() {
 		return alarme;
 	}
 
 	public void setAlarme(boolean alarme) {
 		this.alarme = alarme;
+	}
+
+	public Locacao getLocacao() {
+		return locacao;
+	}
+
+	public void setLocacao(Locacao locacao) {
+		this.locacao = locacao;
 	}
 }

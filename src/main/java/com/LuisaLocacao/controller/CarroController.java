@@ -1,4 +1,4 @@
-package com.isaacLocacao.controller;
+package com.LuisaLocacao.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.isaacLocacao.models.Carro;
-import com.isaacLocacao.repository.CarroRepository;
+import com.LuisaLocacao.models.Carro;
+import com.LuisaLocacao.repository.CarroRepository;
 
 @Controller
 public class CarroController {

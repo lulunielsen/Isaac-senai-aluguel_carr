@@ -1,4 +1,4 @@
-package com.isaacLocacao.locadoraveiculos;
+package com.LuisaLocacao.locadoraveiculos;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

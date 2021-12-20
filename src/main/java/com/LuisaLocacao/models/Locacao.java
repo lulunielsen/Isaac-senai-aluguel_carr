@@ -1,4 +1,4 @@
-package com.isaacLocacao.models;
+package com.LuisaLocacao.models;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
